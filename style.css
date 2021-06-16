@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contenedor {
+  display: flex;
+  margin: 40px 0;
+  padding: 20px;
+  position: relative;
+}
+.hijo {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: blue;
+}
+
+.hijo:hover {
+  transition: all 1s ease-in-out;
+}
+
+.hijo:nth-child(1):hover {
+  background-color: red;
+}
+
+.hijo:nth-child(2):hover {
+  transform: translateY(60px);
+}
+
+.hijo:nth-child(3):hover {
+  border-radius: 50%;
+}
+
+.hijo:nth-child(4):hover {
+  transform: rotate(45deg);
+}
+
+
+/* ANIMACION CUADRADO */
+
+.animacion {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+
+  animation-name: hover;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hover {
+  0% {
+    transform: translate(0);
+  }
+
+  25%{
+    transform: translateX(300px);
+  }
+
+  50%{
+    transform: translate(300px, 300px); 
+  }
+
+  75%{
+    transform: translateY(300px); 
+  }
+
+  100%{
+    transform: translate(0px);
+  }
+}
